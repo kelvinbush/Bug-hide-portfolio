@@ -68,9 +68,9 @@ worksSection.innerHTML = articlesList.map((work, index) => `
         <div class="article_description">
             <h3>${work.title}</h3>
             <div class="works_specs">
-                <h6>${work.specs[0]}</h6>  
-                <p>${work.specs[1]}</p>
+                <h6>${work.specs[1]}</h6>  
                 <p>${work.specs[2]}</p>
+                <p>${work.specs[3]}</p>
             </div>
             <p class="works__description">${work.description}</p>
             <ul class="works_languages">
@@ -89,7 +89,7 @@ const worksArticles = document.querySelectorAll('.btn__see');
 worksArticles.forEach((article) => {
   article.addEventListener('click', (e) => {
     const articleId = e.target.dataset.id;
-    const articleData = articlesList.find((article) => article.id === +articleId);
+    const articleData = articlesList.find((article) => article.id === articleId);
     modalSection.innerHTML = `
       <div class="modal__content">
         <article class="modal__article">
